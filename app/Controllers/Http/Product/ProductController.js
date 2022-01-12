@@ -37,8 +37,8 @@ class ProductController {
     return new DeleteProductFeature(request, response, params).handle();
   }
 
-  async deleteProductCategory({ request, response, params }) {
-    return new DeleteProductCategoryFeature(request, response, params).handle();
+  async deleteProductCategory({ request, response, params: { product_category_id } }) {
+    return new DeleteProductCategoryFeature(request, response, product_category_id).handle();
   }
 }
 
