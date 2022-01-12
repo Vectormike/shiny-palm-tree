@@ -29,8 +29,8 @@ class ProductController {
     return new UpdateProductFeature(request, response, params).handle();
   }
 
-  async updateProductCategory({ request, response, params }) {
-    return new UpdateProductCategoryFeature(request, response, params).handle();
+  async updateProductCategory({ request, response, params: { product_category_id } }) {
+    return new UpdateProductCategoryFeature(request, response, product_category_id).handle();
   }
 
   async deleteProduct({ request, response, params }) {
