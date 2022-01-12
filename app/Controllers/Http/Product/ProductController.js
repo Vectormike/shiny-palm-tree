@@ -21,8 +21,8 @@ class ProductController {
     return new ReadProductFeature(request, response, params).handle();
   }
 
-  async readProductCategory({ request, response, params }) {
-    return new ReadProductCategoryFeature(request, response, params).handle();
+  async readProductCategory({ request, response, params: { product_category_id } }) {
+    return new ReadProductCategoryFeature(request, response, product_category_id).handle();
   }
 
   async updateProduct({ request, response, params }) {
