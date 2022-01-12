@@ -1,0 +1,18 @@
+*/.env
+/.env
+
+*/node_modules
+/node_modules
+*/desktop.ini
+*/package-lock.json
+/package-lock.json
+
+.prettierrc
+.eslintrc
+.vscode
+**/uploads/
+*/.eslintrc.js
+*/.eslintrc.json
+# **/seeds/Z[a-zA-Z]*.js
+notes.md
+.DS_Store
