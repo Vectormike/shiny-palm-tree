@@ -18,6 +18,7 @@ class CreateProductSubCategoryFeature {
       throw new NotFoundException('Product Category');
     }
 
+    // Create Product Sub Category
     const productSubCategory = new ProductSubCategory();
     productSubCategory.name = name;
     productSubCategory.status = Boolean(status);

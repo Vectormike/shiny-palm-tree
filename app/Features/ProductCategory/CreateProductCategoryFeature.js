@@ -11,6 +11,7 @@ class CreateProductCategoryFeature {
   async handle() {
     const { name, status } = this.request.all();
 
+    // Create Product Category
     const productCategory = new ProductCategory();
     productCategory.name = name;
     productCategory.status = Boolean(status);
@@ -20,7 +21,6 @@ class CreateProductCategoryFeature {
     return this.response.status(200).send({
       message: 'Product Category Create Successful',
       status: 'Success',
-      status_code: 200,
       result: productCategory,
     });
   }

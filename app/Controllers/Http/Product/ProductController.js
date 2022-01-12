@@ -25,8 +25,8 @@ class ProductController {
     return new CreateProductSubCategoryFeature(request, response, auth).handle();
   }
 
-  async readProduct({ request, response, params }) {
-    return new ReadProductFeature(request, response, params).handle();
+  async readProduct({ request, response, params: { product_id } }) {
+    return new ReadProductFeature(request, response, product_id).handle();
   }
 
   async readProductCategory({ request, response, params: { product_category_id } }) {
@@ -37,8 +37,8 @@ class ProductController {
     return new ReadProductSubCategoryFeature(request, response, product_sub_category_id).handle();
   }
 
-  async updateProduct({ request, response, params }) {
-    return new UpdateProductFeature(request, response, params).handle();
+  async updateProduct({ request, response, params: { product_id } }) {
+    return new UpdateProductFeature(request, response, product_id).handle();
   }
 
   async updateProductCategory({ request, response, params: { product_category_id } }) {
@@ -49,8 +49,8 @@ class ProductController {
     return new UpdateProductSubCategoryFeature(request, response, product_sub_category_id).handle();
   }
 
-  async deleteProduct({ request, response, params }) {
-    return new DeleteProductFeature(request, response, params).handle();
+  async deleteProduct({ request, response, params: { product_id } }) {
+    return new DeleteProductFeature(request, response, product_id).handle();
   }
 
   async deleteProductCategory({ request, response, params: { product_category_id } }) {

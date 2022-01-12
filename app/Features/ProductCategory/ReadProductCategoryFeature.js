@@ -10,8 +10,6 @@ class ReadProductCategoryFeature {
   }
 
   async handle() {
-    console.log(this.product_category_id, 'params');
-
     const foundProductCategory = await ProductCategory.findBy('id', this.product_category_id);
 
     if (!foundProductCategory) {

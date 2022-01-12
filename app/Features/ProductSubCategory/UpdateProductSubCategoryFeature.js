@@ -19,6 +19,7 @@ class UpdateProductSubCategoryFeature {
       throw new NotFoundException('Product Sub Category');
     }
 
+    // Check if Product Category Exists
     if (product_category_id) {
       const foundProductCategory = await ProductCategory.findBy('id', product_category_id);
       if (!foundProductCategory) {
