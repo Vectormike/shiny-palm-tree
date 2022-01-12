@@ -21,7 +21,7 @@
 - Clone the official repository of the application using this command:
 
 ```
-    git clone https://repos.crenettechlabs.com/clients/elderlydoc/elderlydoc-web.git
+    git clone https://github.com/Vectormike/shiny-palm-tree.git
 ```
 
 - Create the .env file for envirenment variavles, You can use the .env.exapmle as a guide
